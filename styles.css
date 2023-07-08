@@ -1,0 +1,315 @@
+/* CSS code */
+
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff; /* Set background color to white */
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Set position to fixed */
+    top: 0; /* Position the header at the top of the page */
+    left: 0;
+    right: 0;
+    z-index: 999; /* Ensure the header appears above other content */
+    border-top: 2px solid #000000; /* Add top border */
+    border-bottom: 2px solid #000000; /* Add bottom border */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px; /* Set font size for the header links */
+    font-weight: bold; /* Make the links bold */
+    position: relative; /* Add relative positioning for the pseudo-element */
+}
+
+nav ul li a::after {
+    content: ''; /* Add the pseudo-element for the underline */
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(to right, #333, #999); /* Use a gradient for the underline */
+    background-repeat: no-repeat;
+    background-size: 0% 100%; /* Start with 0% width */
+    transition: background-size 0.3s ease; /* Add smooth transition effect */
+}
+
+nav ul li a:hover::after {
+    background-size: 100% 100%; /* Increase the width to 100% on hover */
+}
+
+/* Apply static underline to the current page */
+header .current-page::after {
+  background-size: 100% 100%; /* Set the underline to full width */
+}
+
+/* Sections */
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Additional styles */
+section {
+  margin-bottom: 20px; /* Add margin at the bottom of each section */
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+
+p {
+    font-size: 16px;
+    color: #000000;
+    text-align: center; /* Center align the text */
+}
+
+/* Footer */
+footer {
+    background-color: transparent; /* Set background color to transparent */
+    padding: 10px 20px;
+    font-size: 4px;
+    color: #000000;
+    position: fixed; /* Set position to fixed */
+    bottom: 0; /* Position the footer at the bottom of the page */
+    left: 0;
+}
+
+/* Image */
+#image {
+    background-color: #f1f1f1; /* Set background color for the banner */
+    padding: 0; /* Remove padding to cover entire banner */
+    text-align: center; /* Center the image horizontally */
+}
+
+#image img {
+    width: 100%; /* Set the image width to 100% of the container */
+    height: 100%; /* Set the image height to 100% of the container */
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+/* About us section */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Set background color to white */
+    height: calc(100vh - 100px); /* Adjust the height to account for the header height */
+    overflow: auto; /* Enable scrolling if the content exceeds the height */
+    padding-top: 100px; /* Add padding to ensure content is not hidden behind the header */
+  }
+  
+  #about p {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Bell MT', serif;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ffffff; /* Set the same color as the background */
+    max-width: 600px; /* Set a maximum width for the content */
+    box-sizing: border-box;
+  }  
+
+/* Contact Us section */
+#contact h2 {
+    font-weight: bold; /* Make the "Contact Us" heading bold */
+    font-size: 26px; /* Set a smaller font size */
+  }
+  
+  #contact p {
+    font-weight: normal; /* Remove the bold style from the text */
+    font-size: 14px; /* Set a smaller font size */
+  }  
+
+/* Additional styles */
+section {
+    margin-bottom: 20px; /* Add margin at the bottom of each section */
+}
+
+/* Languages switcher section */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .language-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .language-link:hover {
+    background-color: #555;
+  }
+/* Services section*/
+.services {
+    position: relative;
+    background-image: url('cleanwindow.jpg'); /* Replace 'cleanwindow.jpg' with the actual path of your image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px; /* Add padding to avoid content being hidden by the header */
+    text-align: center;
+  }
+  
+  .services .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .services .banner {
+    background-color: rgba(255, 255, 255, 0.8); /* Background color of the rectangle */
+    padding: 20px;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: left;
+    max-width: 80%; /* Maximum width of the rectangle */
+  }
+  
+  .services h2 {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Bell MT', serif;
+  }
+  
+  .services ul {
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .services li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Bell MT', serif;
+  }
+  
+  .services .contact-info {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .services .contact-info h2 {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Bell MT', serif;
+    margin-bottom: 10px;
+  }
+  
+  .services .contact-info p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+
+/* Add this CSS code */
+.menu-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-icon::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 20px;
+  background-color: #333;
+  margin-right: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  margin-bottom: 5px; /* Adjust the spacing between the dots */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.dropdown-content a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+
+.menu-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+  pointer-events: none; /* Make the menu text unclickable */
+}
