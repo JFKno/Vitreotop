@@ -379,60 +379,48 @@ section {
   pointer-events: none; /* Make the menu text unclickable */
 }
 
-/* Add this CSS code */
+/* Adjust the font size of the dropdown content for mobile */
 @media (max-width: 768px) {
-  /* Adjust styles for screens up to 768px wide */
-  .container {
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  /* Adjust image size in "About Us" section */
-  #about img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Adjust image size in "Contact Us" section */
-  #contact img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Adjust dropdown content width */
-  .dropdown-content {
-    width: 100%;
-  }
-
-  /* Adjust other styles as needed */
-}
-
-/* Your existing CSS code */
-
-/* Add this CSS code */
-@media (max-width: 768px) {
-  /* Adjust styles for screens up to 768px wide */
   .dropdown-content {
     font-size: 14px;
   }
+}
 
+/* Adjust the font family and center the text in the "About Us" section */
+@media (max-width: 768px) {
   #about p {
     font-family: 'Bell MT', serif;
     text-align: center;
   }
+}
 
-  #about h2,
-  #contact h2 {
+/* Center the heading in the "About Us" section */
+@media (max-width: 768px) {
+  #about h2 {
     text-align: center;
   }
+}
 
+/* Adjust the font size and center the text in the "Contact Us" section */
+@media (max-width: 768px) {
   #contact p {
     font-size: 14px;
     text-align: center;
   }
+}
 
+/* Center the heading in the "Contact Us" section */
+@media (max-width: 768px) {
+  #contact h2 {
+    text-align: center;
+  }
+}
+
+/* Adjust the size of the image in the "Image" section */
+@media (max-width: 768px) {
   #image img {
     width: 100%;
     height: auto;
   }
 }
+
