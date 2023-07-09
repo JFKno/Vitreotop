@@ -51,21 +51,49 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Add this JavaScript code to your existing script.js file or create a new one
+// Add event listeners to the menu icon and dropdown content
+const menuIcon = document.querySelector('.menu-icon');
+const dropdown = document.querySelector('.dropdown-content');
+let isOpen = false;
+let isMenuHovered = false;
+let isDropdownHovered = false;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const menuIcon = document.querySelector(".menu-icon");
-  const drawer = document.querySelector(".drawer");
+menuIcon.addEventListener('mouseenter', openMenu);
+menuIcon.addEventListener('mouseleave', closeMenu);
+dropdown.addEventListener('mouseenter', () => { isDropdownHovered = true; });
+dropdown.addEventListener('mouseleave', () => { isDropdownHovered = false; });
 
-  menuIcon.addEventListener("click", () => {
-    drawer.classList.toggle("open");
-  });
-});
+// Add event listener to the document for cursor movement outside the menu icon and dropdown content
+document.addEventListener('mousemove', handleMouseMove);
 
-/* Add this JavaScript code */
-function toggleDropdown() {
-  const dropdownContent = document.getElementById("dropdownContent");
-  dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+function openMenu() {
+  isOpen = true;
+  dropdown.style.display = 'block';
+  dropdown.style.opacity = '1'; /* Set opacity to 1 */
+  dropdown.style.transform = 'translateX(0)'; /* Move in from right */
+  menuIcon.style.opacity = '0.5'; /* Reduce opacity of menu icon on hover */
 }
 
+function closeMenu() {
+  if (!isMenuHovered && !isDropdownHovered) {
+    isOpen = false;
+    dropdown.style.opacity = '0'; /* Set opacity to 0 */
+    dropdown.style.transform = 'translateX(-100%)'; /* Move out to left */
+    menuIcon.style.opacity = '1'; /* Restore opacity of menu icon */
 
+    setTimeout(() => {
+      dropdown.style.display = 'none';
+    }, 300); /* Wait for transition to complete */
+  }
+}
+
+function handleMouseMove(event) {
+  isMenuHovered = menuIcon.contains(event.target);
+  if (!isMenuHovered) {
+    isDropdownHovered = dropdown.contains(event.target);
+  }
+
+  if (!isMenuHovered && !isDropdownHovered && isOpen) {
+    closeMenu();
+  }
+}
