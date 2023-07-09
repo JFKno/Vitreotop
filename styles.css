@@ -406,3 +406,20 @@ section {
 
   /* Adjust other styles as needed */
 }
+
+/* Your existing CSS code */
+
+/* Add the new media queries at the bottom */
+@media (max-width: 768px) {
+  /* Adjust styles for screens up to 768px wide */
+  #about p,
+  #contact p {
+    font-size: 14px;
+  }
+
+  .dropdown-content {
+    width: 100%;
+    right: auto;
+  }
+}
+
