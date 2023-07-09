@@ -89,15 +89,80 @@ header .current-page::after {
 }
 
 /* Sections */
-section {
-  padding: 20px;
-  text-align: center;
-}
+/* CSS code for "ourservices.html" */
 
 /* Additional styles */
 section {
   margin-bottom: 20px; /* Add margin at the bottom of each section */
 }
+
+/* Services section */
+.services {
+  position: relative;
+  background-image: url('cleanwindow.jpg'); /* Replace 'cleanwindow.jpg' with the actual path of your image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px; /* Add padding to avoid content being hidden by the header */
+  text-align: center;
+}
+
+.services .container {
+  position: relative;
+  z-index: 1;
+}
+
+.services .banner {
+  background-color: rgba(255, 255, 255, 0.8); /* Background color of the rectangle */
+  padding: 20px;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: left;
+  max-width: 80%; /* Maximum width of the rectangle */
+}
+
+.services h2 {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Bell MT', serif;
+}
+
+.services ul {
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+  text-align: left;
+}
+
+.services li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: 'Bell MT', serif;
+}
+
+.services .contact-info {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.services .contact-info h2 {
+  font-size: 26px;
+  font-weight: bold;
+  font-family: 'Bell MT', serif;
+  margin-bottom: 10px;
+}
+
+.services .contact-info p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
 
 h2 {
     font-size: 16px;
@@ -312,4 +377,32 @@ section {
   font-weight: bold;
   margin-right: 10px;
   pointer-events: none; /* Make the menu text unclickable */
+}
+
+/* Add this CSS code */
+@media (max-width: 768px) {
+  /* Adjust styles for screens up to 768px wide */
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  /* Adjust image size in "About Us" section */
+  #about img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust image size in "Contact Us" section */
+  #contact img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust dropdown content width */
+  .dropdown-content {
+    width: 100%;
+  }
+
+  /* Adjust other styles as needed */
 }
