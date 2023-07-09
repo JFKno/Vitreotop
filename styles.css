@@ -669,7 +669,7 @@ footer {
 /* Adjust the font size and center the text in the header for mobile */
 @media (max-width: 768px) {
   .menu-text {
-    font-size: 16px;
+    font-size: 8px;
     font-weight: bold;
     margin-right: 10px;
     pointer-events: none;
@@ -692,5 +692,21 @@ footer {
     text-align: left;
   }
 }
+
+/* Adjust the position and styles of the dropdown wrapper */
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-content {
+  /* Other styles */
+  display: none;
+}
+
+/* Adjust the position of the dropdown content */
+.dropdown-wrapper.open .dropdown-content {
+  display: block;
+}
+
 
 

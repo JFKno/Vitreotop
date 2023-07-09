@@ -97,3 +97,19 @@ function handleMouseMove(event) {
     closeMenu();
   }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  var dropdownWrapper = document.querySelector('.dropdown-wrapper');
+
+  // Toggle the dropdown menu when clicking the menu icon
+  dropdownWrapper.addEventListener('click', function() {
+    dropdownWrapper.classList.toggle('open');
+  });
+
+  // Hide the dropdown menu when clicking outside of it
+  document.addEventListener('click', function(event) {
+    if (!dropdownWrapper.contains(event.target)) {
+      dropdownWrapper.classList.remove('open');
+    }
+  });
+});
