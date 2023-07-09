@@ -409,17 +409,25 @@ section {
 
 /* Your existing CSS code */
 
-/* Add the new media queries at the bottom */
+/* Add this CSS code */
 @media (max-width: 768px) {
   /* Adjust styles for screens up to 768px wide */
-  #about p,
-  #contact p {
+  .dropdown-content {
     font-size: 14px;
   }
 
-  .dropdown-content {
+  #about p {
+    font-family: 'Bell MT', serif;
+    text-align: center;
+  }
+
+  #contact p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  #image img {
     width: 100%;
-    right: auto;
+    height: auto;
   }
 }
-
