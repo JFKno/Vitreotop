@@ -382,7 +382,7 @@ section {
 /* Adjust the font size of the dropdown content for mobile */
 @media (max-width: 768px) {
   .dropdown-content {
-    font-size: 14px;
+    font-size: 8px;
   }
 }
 
@@ -391,6 +391,7 @@ section {
   #about p {
     font-family: 'Bell MT', serif;
     text-align: center;
+    font-size: 14px;
   }
 }
 
