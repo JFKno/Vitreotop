@@ -595,3 +595,24 @@ section {
   }
 }
 
+/* Footer */
+footer {
+  background-color: transparent; /* Set background color to transparent */
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #000000;
+  position: relative; /* Set position to relative */
+  margin-top: 20px; /* Add margin at the top to create spacing */
+}
+
+/* Contact Us section */
+#contact {
+  margin-bottom: 20px; /* Add margin at the bottom of the "Contact Us" section */
+  position: relative; /* Set position to relative */
+}
+
+/* About Us section */
+#about {
+  margin-bottom: 20px; /* Add margin at the bottom of the "About Us" section */
+}
+
