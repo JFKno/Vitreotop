@@ -15,16 +15,29 @@
       <div class="header-right">
         <nav>
           <ul>
-            <li><a href="index_fr.html">Accueil</a></li>
+            <li>
+              <div class="dropdown">
+                <div class="menu-icon" onclick="toggleDropdown()">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+                <div class="dropdown-content" id="dropdownContent">
+                  <a href="index_fr.html">Accueil</a>
+                  <a href="ourservices_fr.html">Nos Services</a>
+                  <a href="ourservices.html">English</a>
+                </div>
+              </div>
+            </li>
           </ul>
         </nav>
         <nav class="language-switcher">
-          <a href="ourservices.html" class="language-link">English</a>
         </nav>
       </div>
     </div>
   </header>
-
+  
+  
   <section class="services">
     <div class="container">
       <div class="banner">
@@ -41,9 +54,9 @@
     <div class="contact-info">
       <h2>Contactez-nous</h2>
       <p>Pour toute question ou pour prendre rendez-vous, veuillez nous contacter :</p>
-      <p>Téléphone : 123-456-7890</p>
-      <p>Email : info@vitreotop.ca</p>
-      <p>Adresse : 123 Rue Principale, Ville, Province, Code Postal</p>
+      <p>Téléphone : 1-514-829-7239</p>
+        <p>Email : Vitreotop@outlook.com</p>
+        <p>816, rang Saint-Camille, Sainte-Félicité-de-l’islet, Quebec, G0R 4P0 </p>
     </div>
   </section>
   
@@ -53,5 +66,10 @@
       <p>&copy; 2023 Vitreotop. Tous droits réservés. | Site web réalisé par YourCompanyName</p>
     </div>
   </footer>
+  
+
+  <!-- Add this before the closing </body> tag -->
+<script src="smooth-scroll.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
