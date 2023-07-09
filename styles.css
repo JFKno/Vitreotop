@@ -379,19 +379,13 @@ section {
   pointer-events: none; /* Make the menu text unclickable */
 }
 
-/* Adjust the font size of the dropdown content for mobile */
-@media (max-width: 768px) {
-  .dropdown-content {
-    font-size: 8px;
-  }
-}
-
 /* Adjust the font family and center the text in the "About Us" section */
 @media (max-width: 768px) {
   #about p {
     font-family: 'Bell MT', serif;
     text-align: center;
     font-size: 14px;
+    font-weight: bold;
   }
 }
 
@@ -407,6 +401,7 @@ section {
   #contact p {
     font-size: 14px;
     text-align: center;
+    font-weight: bold;
   }
 }
 
@@ -425,3 +420,45 @@ section {
   }
 }
 
+/* Adjust the height and max-height of the dropdown content for mobile */
+@media (max-width: 768px) {
+  .dropdown-content {
+    height: auto;
+    max-height: 60vh; /* Adjust the value as needed */
+    overflow-y: auto;
+  }
+}
+
+/* Adjust the font size and center the text in the header for mobile */
+@media (max-width: 768px) {
+  .menu-text {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    pointer-events: none;
+  }
+}
+
+/* Adjust the font size and center the text in the "About Us" section for mobile */
+@media (max-width: 768px) {
+  #about h2, #about p {
+    text-align: center;
+    font-size: 20px; /* Adjust the font size as needed */
+  }
+}
+
+
+/* Center the "About Us" paragraph and heading on desktop */
+#about {
+  text-align: center;
+}
+
+#about p {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Bell MT', serif;
+}
+
+#about h2 {
+  text-align: center;
+}
