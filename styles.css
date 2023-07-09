@@ -421,6 +421,11 @@ section {
     text-align: center;
   }
 
+  #about h2,
+  #contact h2 {
+    text-align: center;
+  }
+
   #contact p {
     font-size: 14px;
     text-align: center;
