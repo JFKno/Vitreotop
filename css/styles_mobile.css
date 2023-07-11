@@ -1,59 +1,171 @@
-/* Adjust the font family and center the text in the "About Us" section */
-@media (max-width: 768px) {
-    #about p {
-      font-family: 'Bell MT', serif;
-      text-align: center;
-      font-size: 14px;
-      font-weight: bold;
-    }
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff; /* Set background color to white */
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0; /* Set padding to 0 */
+}
+
+/* Header */
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  position: fixed; /* Set position to fixed */
+  top: 0; /* Position the header at the top of the page */
+  left: 0;
+  right: 0;
+  z-index: 999; /* Ensure the header appears above other content */
+  border-top: 2px solid #000000; /* Add top border */
+  border-bottom: 2px solid #000000; /* Add bottom border */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  flex: 1; /* Take up remaining horizontal space */
+  display: flex; /* Add flex display */
+  justify-content: flex-start; /* Align content to the start (far left) */
+}
+
+.header-left h1 {
+  margin: 0; /* Remove any default margin */
+  text-align: left; /* Align the text to the left */
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px; /* Set font size for the header links */
+  font-weight: bold; /* Make the links bold */
+  position: relative; /* Add relative positioning for the pseudo-element */
+}
+
+nav ul li a::after {
+  content: ''; /* Add the pseudo-element for the underline */
+  position: absolute;
+  bottom: -2px; /* Position the underline below the text */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, #333, #999); /* Use a gradient for the underline */
+  background-repeat: no-repeat;
+  background-size: 0% 100%; /* Start with 0% width */
+  transition: background-size 0.3s ease; /* Add smooth transition effect */
+}
+
+nav ul li a:hover::after {
+  background-size: 100% 100%; /* Increase the width to 100% on hover */
+}
+
+/* Apply static underline to the current page */
+header .current-page::after {
+  background-size: 100% 100%; /* Set the underline to full width */
+}
+
+/* About Us section */
+#about {
+  padding-top: 100px; /* Adjust the top padding as needed */
+  padding-bottom: 100px;
+}
+
+#about h2 {
+  font-size: 24px;
+  color: #5a5a5a;
+  font-weight: bold;
+  font-family: 'Bell MT', serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Bell MT', serif;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Contact section */
+#contact {
+  padding-top: 80px; /* Adjust the top padding as needed */
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Bell MT', serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info p {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: transparent; /* Set background color to transparent */
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #000000;
+  position: relative; /* Set position to relative */
+  margin-top: 20px; /* Add margin at the top to create spacing */
+}
+
+/* Media Queries for Mobile */
+@media only screen and (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  /* Center the heading in the "About Us" section */
-  @media (max-width: 768px) {
-    #about h2 {
-      text-align: center;
-    }
+
+  .header-left h1 {
+    text-align: center;
   }
-  
-  /* Adjust the font size and center the text in the "Contact Us" section */
-  @media (max-width: 768px) {
-    #contact p {
-      font-size: 14px;
-      text-align: center;
-      font-weight: bold;
-    }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
   }
-  
-  /* Center the heading in the "Contact Us" section */
-  @media (max-width: 768px) {
-    #contact h2 {
-      text-align: center;
-    }
+
+  #about p {
+    font-size: 16px;
+    padding: 0 10px;
   }
-  
-  /* Adjust the size of the image in the "Image" section */
-  @media (max-width: 768px) {
-    #image img {
-      width: 100%;
-      height: auto;
-    }
-  }
-  
-  /* Adjust the height and max-height of the dropdown content for mobile */
-  @media (max-width: 768px) {
-    .dropdown-content {
-      height: auto;
-      max-height: 60vh; /* Adjust the value as needed */
-      overflow-y: auto;
-    }
-  }
-  
-  /* Adjust the position of the footer for mobile */
-  @media (max-width: 768px) {
-    footer {
-      position: static;
-      margin-top: 20px;
-      text-align: left;
-    }
-  }
-  
+}
