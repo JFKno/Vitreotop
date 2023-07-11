@@ -98,6 +98,7 @@ header .current-page::after {
 
 #about h2 {
   font-size: 24px;
+  color: #5a5a5a;
   font-weight: bold;
   font-family: 'Bell MT', serif;
   text-align: center;
