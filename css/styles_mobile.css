@@ -110,7 +110,8 @@ header .current-page::after {
   font-weight: bold;
   font-family: 'Bell MT', serif;
   text-align: center;
-  padding: 0 20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 /* Contact section */
@@ -167,6 +168,6 @@ footer {
   #about p {
     font-size: 16px;
     text-align: center;
-    padding-top: 200px;
+    padding-top: 120px;
   }
 }
