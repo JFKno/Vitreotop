@@ -93,7 +93,7 @@ header .current-page::after {
 /* About Us section */
 #about {
   padding-top: 200px;
-  padding-bottom: 200px;
+  padding-bottom: 50px;
 }
 
 #about h2 {
