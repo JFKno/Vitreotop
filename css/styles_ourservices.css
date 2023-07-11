@@ -1,0 +1,179 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff; /* Set background color to white */
+    color: #333;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Set position to fixed */
+    top: 0; /* Position the header at the top of the page */
+    left: 0;
+    right: 0;
+    z-index: 999; /* Ensure the header appears above other content */
+    border-top: 2px solid #000000; /* Add top border */
+    border-bottom: 2px solid #000000; /* Add bottom border */
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px; /* Set font size for the header links */
+    font-weight: bold; /* Make the links bold */
+    position: relative; /* Add relative positioning for the pseudo-element */
+  }
+  
+  nav ul li a::after {
+    content: ''; /* Add the pseudo-element for the underline */
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(to right, #333, #999); /* Use a gradient for the underline */
+    background-repeat: no-repeat;
+    background-size: 0% 100%; /* Start with 0% width */
+    transition: background-size 0.3s ease; /* Add smooth transition effect */
+  }
+  
+  nav ul li a:hover::after {
+    background-size: 100% 100%; /* Increase the width to 100% on hover */
+  }
+  
+  /* Apply static underline to the current page */
+  header .current-page::after {
+  background-size: 100% 100%; /* Set the underline to full width */
+  }
+  
+
+  .services {
+    position: relative;
+    background-image: url('../images/cleanwindow.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #000000;
+    margin-top: 100px;
+    padding: 50px 0;
+  }
+  
+  .services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.8);
+    z-index: -1;
+  }
+  
+  .services .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .services .overlay {
+    background-color: rgba(128, 128, 128, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+  }
+  
+  
+  .services h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .services-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .services-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  
+  #contact {
+    padding-top: 100px;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Bell MT', serif;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info {
+    text-align: center;
+  }
+  
+  .contact-info p {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: transparent; /* Set background color to transparent */
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+    padding-top: 300px;
+    position: relative; /* Set position to relative */
+  }
+  
+  

@@ -1,0 +1,59 @@
+/* Adjust the font family and center the text in the "About Us" section */
+@media (max-width: 768px) {
+    #about p {
+      font-family: 'Bell MT', serif;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+  
+  /* Center the heading in the "About Us" section */
+  @media (max-width: 768px) {
+    #about h2 {
+      text-align: center;
+    }
+  }
+  
+  /* Adjust the font size and center the text in the "Contact Us" section */
+  @media (max-width: 768px) {
+    #contact p {
+      font-size: 14px;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+  
+  /* Center the heading in the "Contact Us" section */
+  @media (max-width: 768px) {
+    #contact h2 {
+      text-align: center;
+    }
+  }
+  
+  /* Adjust the size of the image in the "Image" section */
+  @media (max-width: 768px) {
+    #image img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Adjust the height and max-height of the dropdown content for mobile */
+  @media (max-width: 768px) {
+    .dropdown-content {
+      height: auto;
+      max-height: 60vh; /* Adjust the value as needed */
+      overflow-y: auto;
+    }
+  }
+  
+  /* Adjust the position of the footer for mobile */
+  @media (max-width: 768px) {
+    footer {
+      position: static;
+      margin-top: 20px;
+      text-align: left;
+    }
+  }
+  
