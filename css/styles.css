@@ -106,7 +106,7 @@ header .current-page::after {
 }
 
 #about p {
-  font-size: 28px;
+  font-size: 42px;
   font-weight: bold;
   font-family: 'Bell MT', serif;
   text-align: center;
@@ -154,6 +154,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 200px;
+  padding-top: 200px;
 }
 
 #image .container {
