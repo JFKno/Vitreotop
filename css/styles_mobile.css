@@ -148,6 +148,17 @@ footer {
   margin-top: 20px; /* Add margin at the top to create spacing */
 }
 
+/* CSS for desktop */
+.dropdown-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-content a {
+  margin-right: 20px; /* Adjust the margin value as desired */
+}
+
 /* Media Queries for Mobile */
 @media only screen and (max-width: 768px) {
   header .container {
@@ -168,5 +179,14 @@ footer {
     font-size: 16px;
     text-align: center;
     padding-top: 200px;
+  }
+}
+
+/* CSS for mobile */
+@media only screen and (max-width: 768px) {
+  .dropdown-content {
+    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 }
