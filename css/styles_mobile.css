@@ -12,11 +12,24 @@ body {
   color: #333;
 }
 
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0; /* Set padding to 0 */
+  opacity: 0;
+  animation: fadeInAnimation 0.5s ease forwards;
 }
 
 /* Header */
@@ -58,6 +71,8 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin-left: 40px;
+  opacity: 0;
+  animation: fadeInAnimation 0.5s ease forwards;
 }
 
 nav ul li a {

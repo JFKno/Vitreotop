@@ -12,11 +12,29 @@ body {
   color: #333;
 }
 
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 0.5s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  opacity: 0;
+  animation: fadeInAnimation 0.5s ease forwards;
 }
 
 /* Header */
@@ -55,6 +73,8 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin-left: 20px;
+  opacity: 0;
+  animation: fadeInAnimation 0.5s ease forwards;
 }
 
 nav ul li a {
@@ -95,7 +115,7 @@ padding-bottom: 100px;
 }
 
 .services h2 {
-font-size: 32px;
+font-size: 50px;
 padding-top: 100px;
 font-weight: bold;
 text-align: center;
@@ -104,6 +124,7 @@ margin-bottom: 30px;
 
 .services p {
 font-size: 26px;
+margin-bottom: 35px;
 text-align: center;
 font-weight: bold;
 }

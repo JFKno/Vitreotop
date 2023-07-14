@@ -12,11 +12,29 @@ body {
   color: #333;
 }
 
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 0.5s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0; /* Set padding to 0 */
+  opacity: 0;
+  animation: fadeInAnimation 0.5s ease forwards;
 }
 
 /* Header */
@@ -48,6 +66,7 @@ header .container {
 }
 
 .header-left h1 {
+  font-size: 40px;
   margin: 0; /* Remove any default margin */
   text-align: left; /* Align the text to the left */
 }
@@ -59,6 +78,8 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin-left: 40px;
+  opacity: 0;
+  animation: fadeInAnimation 0.5s ease forwards;
 }
 
 nav ul li a {
@@ -93,7 +114,7 @@ header .current-page::after {
 
 /* About Us section */
 #about {
-  padding-top: 300px;
+  padding-top: 350px;
   padding-bottom: 50px;
 }
 

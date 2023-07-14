@@ -16,3 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  var containerElement = document.querySelector(".container");
+  containerElement.classList.add("fade-in");
+
+  var headerTextElements = document.querySelectorAll("nav ul li");
+  headerTextElements.forEach(function(element) {
+    element.classList.add("fade-in");
+  });
+});
