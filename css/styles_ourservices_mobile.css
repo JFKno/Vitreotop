@@ -1,239 +1,241 @@
 /* Reset some default styles */
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
-  margin: 0;
-  padding: 0;
-}
-
-/* Global styles */
-body {
-  font-family: 'Bell MT', serif;
-  line-height: 1.6;
-  background-color: #ffffff; /* Set background color to white */
-  color: #333;
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeInAnimation 0.5s ease forwards;
-}
-
-@keyframes fadeInAnimation {
-  0% {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: 'Bell MT', serif;
+    line-height: 1.6;
+    background-color: #ffffff; /* Set background color to white */
+    color: #333;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 0.5s ease forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    0% {
       opacity: 0;
       transform: translateY(20px);
-  }
-  100% {
+    }
+    100% {
       opacity: 1;
       transform: translateY(0);
+    }
   }
-}
-
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  opacity: 0;
-  animation: fadeInAnimation 0.5s ease forwards;
-}
-
-/* Header */
-header {
-  background-color: #ffffff;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  text-align: center;
-  position: fixed; /* Set position to fixed */
-  top: 0; /* Position the header at the top of the page */
-  left: 0;
-  right: 0;
-  z-index: 999; /* Ensure the header appears above other content */
-  border-top: 2px solid #000000; /* Add top border */
-  border-bottom: 2px solid #000000; /* Add bottom border */
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-h1 {
-  font-size: 40px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 0;
-  text-align: center; /* Center align the h1 */
-  flex: 1; /* Expand to fill available space */
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-left: 20px;
-  opacity: 0;
-  animation: fadeInAnimation 0.5s ease forwards;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 30px; /* Set font size for the header links */
-  font-weight: bold; /* Make the links bold */
-  position: relative; /* Add relative positioning for the pseudo-element */
-}
-
-nav ul li a::after {
-  content: ''; /* Add the pseudo-element for the underline */
-  position: absolute;
-  bottom: -2px; /* Position the underline below the text */
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-image: linear-gradient(to right, #333, #999); /* Use a gradient for the underline */
-  background-repeat: no-repeat;
-  background-size: 0% 100%; /* Start with 0% width */
-  transition: background-size 0.3s ease; /* Add smooth transition effect */
-}
-
-nav ul li a:hover::after {
-  background-size: 100% 100%; /* Increase the width to 100% on hover */
-}
-
-/* Apply static underline to the current page */
-header .current-page::after {
-  background-size: 100% 100%; /* Set the underline to full width */
-}
-
-/* Styles for Services Section */
-.services {
-  padding-top: 250px;
-  padding-bottom: 100px;
-  text-align: center; /* Center align the text in the services section */
-}
-
-.services h2 {
-  font-size: 40px; /* Decreased font size */
-  padding-top: 100px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.services p {
-  font-size: 24px; /* Decreased font size */
-  margin-bottom: 35px;
-  text-align: center;
-  font-weight: bold;
-}
-
-/* Styles for Image Section */
-#image-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  overflow: hidden;
-}
-
-#image-section .container {
-  width: 100%;
-  max-width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* Set the aspect ratio for a 16:9 image (height / width * 100%) */
-  position: relative;
-}
-
-#image-section img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Footer */
-footer {
-  background-color: transparent; /* Set background color to transparent */
-  text-align: center;
-  font-size: 14px;
-  color: #000000;
-  padding-top: 300px;
-  position: relative; /* Set position to relative */
-}
-
-/* CSS for desktop */
-.dropdown-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.dropdown-content a {
-  margin-right: 20px; /* Adjust the margin value as desired */
-}
-
-/* Media Queries */
-@media only screen and (orientation: portrait) {
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeInAnimation 0.5s ease forwards;
+  }
+  
+  /* Header */
   header {
-      text-align: center;
-      padding-top: 25px;
-      padding-bottom: 25px;
+    background-color: #ffffff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    position: fixed; /* Set position to fixed */
+    top: 0; /* Position the header at the top of the page */
+    left: 0;
+    right: 0;
+    z-index: 999; /* Ensure the header appears above other content */
+    border-top: 2px solid #000000; /* Add top border */
+    border-bottom: 2px solid #000000; /* Add bottom border */
   }
-
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
   h1 {
-      font-size: 32px; /* Decreased font size for mobile */
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0;
+    text-align: center; /* Center align the h1 */
+    flex: 1; /* Expand to fill available space */
   }
-
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+    opacity: 0;
+    animation: fadeInAnimation 0.5s ease forwards;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 30px; /* Set font size for the header links */
+    font-weight: bold; /* Make the links bold */
+    position: relative; /* Add relative positioning for the pseudo-element */
+  }
+  
+  nav ul li a::after {
+    content: ''; /* Add the pseudo-element for the underline */
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(to right, #333, #999); /* Use a gradient for the underline */
+    background-repeat: no-repeat;
+    background-size: 0% 100%; /* Start with 0% width */
+    transition: background-size 0.3s ease; /* Add smooth transition effect */
+  }
+  
+  nav ul li a:hover::after {
+    background-size: 100% 100%; /* Increase the width to 100% on hover */
+  }
+  
+  /* Apply static underline to the current page */
+  header .current-page::after {
+    background-size: 100% 100%; /* Set the underline to full width */
+  }
+  
+  /* Styles for Services Section */
   .services {
+    padding-top: 250px;
+    padding-bottom: 100px;
+    text-align: center; /* Center align the text in the services section */
+  }
+  
+  .services h2 {
+    font-size: 40px; /* Decreased font size */
+    padding-top: 100px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .services p {
+    font-size: 24px; /* Decreased font size */
+    margin-bottom: 35px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Styles for Image Section */
+  #image-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    overflow: hidden;
+  }
+  
+  #image-section .container {
+    width: 100%;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Set the aspect ratio for a 16:9 image (height / width * 100%) */
+    position: relative;
+  }
+  
+  #image-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: transparent; /* Set background color to transparent */
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+    padding-top: 300px;
+    position: relative; /* Set position to relative */
+  }
+  
+  /* CSS for desktop */
+  .dropdown-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dropdown-content a {
+    margin-right: 20px; /* Adjust the margin value as desired */
+  }
+  
+  /* Media Queries */
+  @media only screen and (orientation: portrait) {
+    
+    header {
+        padding: 10px 20px;
+      }
+    
+      h1 {
+        text-align: center; /* Center align the h1 on mobile devices */
+      }
+  
+      nav ul li a {
+          text-decoration: none;
+          color: #333;
+          font-size: 24px; /* Set font size for the header links */
+          font-weight: bold; /* Make the links bold */
+          position: relative; /* Add relative positioning for the pseudo-element */
+        }  
+
+
+    .services {
       padding-top: 150px;
       padding-bottom: 50px;
-  }
-
-  footer {
-      padding-top: 250px; /* Adjust the padding value as desired */
-  }
-}
-
-@media only screen and (orientation: landscape) {
-  header {
-      text-align: center;
-      padding-top: 50px;
-      padding-bottom: 50px;
-  }
-
-  h1 {
+    }
+  
+    .services h2 {
       font-size: 32px; /* Decreased font size for mobile */
+    }
+  
+    .services p {
+      font-size: 18px; /* Decreased font size for mobile */
+    }
+  
+    footer {
+      padding-top: 150px; /* Adjust the padding value as desired */
+    }
   }
-
-  .services {
+  
+  @media only screen and (orientation: landscape) {
+    header {
+      text-align: center;
+      padding: 10px 20px;
+    }
+  
+    .services {
       padding-top: 100px;
       padding-bottom: 50px;
-  }
-
-  footer {
+    }
+  
+    #image-section {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  
+    footer {
       padding-top: 200px; /* Adjust the padding value as desired */
+    }
   }
-}
-
-/* Specific styles for Android devices */
-@media only screen and (orientation: landscape) and (max-width: 767px) and (-webkit-device-pixel-ratio: 2) {
-  header {
-      padding-top: 20px; /* Adjust the padding value as desired */
-      padding-bottom: 20px; /* Adjust the padding value as desired */
-  }
-}
-
-@media only screen and (orientation: landscape) and (max-width: 767px) and (-webkit-device-pixel-ratio: 3) {
-  header {
-      padding-top: 20px; /* Adjust the padding value as desired */
-      padding-bottom: 20px; /* Adjust the padding value as desired */
-  }
-}
+  
