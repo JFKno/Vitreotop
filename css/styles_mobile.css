@@ -267,3 +267,17 @@ footer {
   margin-right: 20px; /* Adjust the margin value as desired */
 }
 
+/* Specific styles for Android devices */
+@media only screen and (orientation: landscape) and (max-width: 767px) and (-webkit-device-pixel-ratio: 2) {
+  header {
+    padding-top: 20px; /* Adjust the padding value as desired */
+    padding-bottom: 20px; /* Adjust the padding value as desired */
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 767px) and (-webkit-device-pixel-ratio: 3) {
+  header {
+    padding-top: 20px; /* Adjust the padding value as desired */
+    padding-bottom: 20px; /* Adjust the padding value as desired */
+  }
+}
