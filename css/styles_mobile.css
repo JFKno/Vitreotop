@@ -32,7 +32,7 @@ body {
 }
 
 /* Media Query pour les petits écrans */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .container {
     max-width: 100%; /* Modifier la largeur maximale pour s'adapter à l'écran */
     padding: 10px; /* Modifier le padding pour un espacement adapté aux petits écrans */
