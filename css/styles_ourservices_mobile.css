@@ -215,6 +215,7 @@ footer {
   }
 
   .services {
+    margin-top: 100px;
     padding-top: 150px;
     padding-bottom: 50px;
   }
@@ -256,6 +257,10 @@ footer {
     margin-left: 20px;
     opacity: 0;
     animation: fadeInAnimation 0.5s ease forwards;
+  }
+
+  nav ul li a {
+    font-size: 24px;
   }
 
   .services {

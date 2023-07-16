@@ -40,8 +40,8 @@ body {
 /* Header */
 header {
   background-color: #ffffff;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   text-align: center;
   position: fixed; /* Set position to fixed */
   top: 0; /* Position the header at the top of the page */
