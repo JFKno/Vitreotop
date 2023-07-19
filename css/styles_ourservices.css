@@ -6,7 +6,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 
 /* Global styles */
 body {
-  font-family: 'Bell MT', serif;
+  font-family: 'Ariel', sans-serif;
   line-height: 1.6;
   background-color: #ffffff; /* Set background color to white */
   color: #333;
@@ -40,8 +40,8 @@ body {
 /* Header */
 header {
   background-color: #ffffff;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
   position: fixed; /* Set position to fixed */
   top: 0; /* Position the header at the top of the page */
@@ -123,10 +123,9 @@ margin-bottom: 30px;
 }
 
 .services p {
-font-size: 26px;
+font-size: 22px;
 margin-bottom: 35px;
 text-align: center;
-font-weight: bold;
 }
 
 #image-section {
@@ -156,6 +155,35 @@ height: 100%;
 object-fit: cover;
 }
 
+#contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+#contact-us .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact-us h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#contact-us a {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#contact-us p {
+  margin-bottom: 10px;
+}
+
+
 
 /* Footer */
 footer {
@@ -163,7 +191,7 @@ footer {
   text-align: center;
   font-size: 14px;
   color: #000000;
-  padding-top: 300px;
+  padding-top: 100px;
   position: relative; /* Set position to relative */
 }
 
@@ -176,4 +204,13 @@ footer {
 
 .dropdown-content a {
   margin-right: 20px; /* Adjust the margin value as desired */
+}
+
+.dropdown-content {
+  display: block; /* Affiche le menu desktop par défaut */
+}
+
+/* Styles pour le menu mobile */
+.mobile-menu {
+  display: none; /* Cache le menu mobile par défaut */
 }

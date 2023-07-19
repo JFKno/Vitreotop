@@ -25,3 +25,16 @@ document.addEventListener("DOMContentLoaded", function() {
     element.classList.add("fade-in");
   });
 });
+
+
+// Sélectionnez l'icône du menu mobile
+var mobileMenuIcon = document.querySelector('.mobile-menu .menu-icon');
+
+// Sélectionnez les options du menu mobile
+var mobileMenuOptions = document.querySelector('.mobile-menu .menu-options');
+
+// Ajoutez un gestionnaire d'événement au clic sur l'icône du menu mobile
+mobileMenuIcon.addEventListener('click', function() {
+  // Basculez la classe 'active' sur les options du menu mobile pour les afficher ou les cacher
+  mobileMenuOptions.classList.toggle('active');
+});

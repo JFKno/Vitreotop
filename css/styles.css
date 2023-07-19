@@ -6,7 +6,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 
 /* Global styles */
 body {
-  font-family: 'Bell MT', serif;
+  font-family: 'Ariel', sans-serif;
   line-height: 1.6;
   background-color: #ffffff; /* Set background color to white */
   color: #333;
@@ -119,10 +119,9 @@ header .current-page::after {
 }
 
 #about h2 {
-  font-size: 28px;
+  font-size: 22px;
   color: #5a5a5a;
   font-weight: bold;
-  font-family: 'Bell MT', serif;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -130,35 +129,40 @@ header .current-page::after {
 #about p {
   font-size: 42px;
   font-weight: bold;
-  font-family: 'Bell MT', serif;
   text-align: center;
   padding-left: 300px;
   padding-right: 300px;
 }
 
 /* Contact section */
-#contact {
-  padding-top: 100px; /* Adjust the top padding as needed */
-  padding-bottom: 100px;
+#contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   text-align: center;
 }
 
-#contact h2 {
-  font-size: 28px;
-  font-weight: bold;
-  font-family: 'Bell MT', serif;
-  text-align: center;
+#contact-us .container {
+  max-width: 600px;
+  margin-top: 0px;
   margin-bottom: 20px;
 }
 
-.contact-info {
-  text-align: center;
+#contact-us h1 {
+  margin-bottom: 20px;
 }
 
-.contact-info p {
-  font-size: 16px;
-  text-align: center;
+#contact-us a {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
+
+#contact-us p {
+  margin-bottom: 10px;
+}
+
 
 /* Footer */
 footer {
@@ -176,7 +180,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100px;
   padding-top: 100px;
 }
 
@@ -202,4 +205,14 @@ footer {
 
 .dropdown-content a {
   margin-right: 20px; /* Adjust the margin value as desired */
+}
+
+/* Styles pour le menu desktop */
+.dropdown-content {
+  display: block; /* Affiche le menu desktop par défaut */
+}
+
+/* Styles pour le menu mobile */
+.mobile-menu {
+  display: none; /* Cache le menu mobile par défaut */
 }

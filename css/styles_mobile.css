@@ -5,7 +5,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 }
 
 body {
-  font-family: 'Bell MT', serif;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
   background-color: #ffffff; /* Set background color to white */
   color: #333;
@@ -22,6 +22,40 @@ body {
   }
 }
 
+/* Header */
+header {
+  background-color: #ffffff;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  position: fixed; /* Set position to fixed */
+  top: 0; /* Position the header at the top of the page */
+  left: 0;
+  right: 0;
+  z-index: 999; /* Ensure the header appears above other content */
+  border-top: 2px solid #000000; /* Add top border */
+  border-bottom: 2px solid #000000; /* Add bottom border */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  flex: 1; /* Take up remaining horizontal space */
+  display: flex; /* Add flex display */
+  justify-content: flex-start; /* Align content to the start (far left) */
+}
+
+.header-left h1 {
+  font-size: 40px;
+  margin: 0; /* Remove any default margin */
+  text-align: left; /* Align the text to the left */
+}
+
 /* Container */
 .container {
   max-width: 1200px;
@@ -31,20 +65,66 @@ body {
   animation: fadeInAnimation 0.5s ease forwards;
 }
 
+#contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+#contact-us .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact-us h1 {
+  margin-bottom: 20px;
+}
+
+#contact-us a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#contact-us p {
+  margin-bottom: 10px;
+}
+
+
 /* Media Query pour les petits écrans */
-@media only screen and (max-width: 1024px) {
-  .container {
-    max-width: 100%; /* Modifier la largeur maximale pour s'adapter à l'écran */
-    padding: 10px; /* Modifier le padding pour un espacement adapté aux petits écrans */
-  }
+@media only screen and (orientation: portrait) {
 
-  /* Header */
   header {
-    padding: 10px; /* Modifier le padding pour un espacement adapté aux petits écrans */
+    padding: 10px 20px;
   }
 
-  header .container {
-    flex-direction: column; /* Modifier la direction du flex en colonne pour les petits écrans */
+  .header-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .header-right {
+    flex: 1;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin-left: 40px;
+  }
+
+  nav ul li a {
+    font-size: 24px;
   }
 
   /* About Us section */
@@ -69,6 +149,96 @@ body {
     font-size: 14px;
   }
 }
+
+/* Media Query pour les appareils mobiles */
+@media only screen and (max-width: 768px) {
+  /* Cacher le menu desktop */
+  .dropdown-content {
+    display: none;
+  }
+  
+  /* Afficher le menu mobile */
+  .mobile-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Styling pour les trois lignes verticales */
+  .mobile-menu .menu-icon {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    position: relative;
+    margin-left: auto; /* Placer le menu à droite */
+  }
+  
+  .mobile-menu .menu-icon span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-menu .menu-icon span:before,
+  .mobile-menu .menu-icon span:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-menu .menu-icon span:before {
+    top: -10px;
+  }
+  
+  .mobile-menu .menu-icon span:after {
+    bottom: -10px;
+  }
+  
+  /* Animation pour ouvrir et fermer le menu */
+  .mobile-menu .menu-icon.active span {
+    background-color: transparent;
+  }
+  
+  .mobile-menu .menu-icon.active span:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  
+  .mobile-menu .menu-icon.active span:after {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+  
+  /* Afficher les options du menu mobile lorsqu'il est activé */
+  .mobile-menu .menu-options {
+    display: none;
+  }
+  
+  .mobile-menu .menu-options.active {
+    display: block;
+  }
+}
+
+.Logo {
+  max-width: 100px; /* Ajuste la largeur maximale selon tes besoins */
+  height: auto; /* Permet à l'image de conserver ses proportions */
+  margin-right: auto; /* Placer le logo à gauche */
+}
+
+
+
+
 
 /* Media Query pour le mode paysage */
 @media only screen and (orientation: landscape) {
@@ -255,15 +425,3 @@ footer {
   position: relative; /* Set position to relative */
   margin-top: 20px; /* Add margin at the top to create spacing */
 }
-
-/* CSS for desktop */
-.dropdown-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.dropdown-content a {
-  margin-right: 20px; /* Adjust the margin value as desired */
-}
-
